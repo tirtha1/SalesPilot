@@ -37,7 +37,7 @@ export default function App() {
       <nav>{nav.map(item => <button key={item.id} className={page === item.id ? "nav-item active" : "nav-item"} onClick={() => setPage(item.id)}><span>{item.icon}</span>{item.label}</button>)}</nav>
       <div className="sidebar-bottom">
         <button className={page === "ask" ? "ask-launch active" : "ask-launch"} onClick={() => setPage("ask")}><span className="spark">✦</span><span><small>AI assistant</small>Ask SalesPilot</span></button>
-        <div className="user-chip"><span className="avatar">AM</span><span><strong>Aarav Mehta</strong><small>Account executive</small></span><span>⋮</span></div>
+        <div className="user-chip"><span className="avatar">TM</span><span><strong>Tirtha Mehta</strong><small>Account executive</small></span><span>⋮</span></div>
       </div>
     </aside>
     <main className="main-content">
@@ -57,7 +57,7 @@ function Overview({ dashboard, customers, onCustomer, onPage }: { dashboard: Das
   const customerFor = (id: number) => customers.find(c => c.id === id);
   const total = dashboard?.open_opportunities.reduce((sum, op) => sum + Number(op.value), 0) || 0;
   return <section className="page overview">
-    <div className="eyebrow">MONDAY, SEPTEMBER 15</div><h1>Good morning, Aarav <span>✦</span></h1><p className="lede">Here’s where your customer relationships need you today.</p>
+    <div className="eyebrow">MONDAY, SEPTEMBER 15</div><h1>Good morning, Tirtha <span>✦</span></h1><p className="lede">Here’s where your customer relationships need you today.</p>
     <div className="metric-grid">
       <Metric label="Follow-ups today" value={dashboard ? String(dashboard.today_follow_ups.length).padStart(2, "0") : "–"} sub="Keep momentum moving" accent="blue" />
       <Metric label="Overdue actions" value={dashboard ? String(dashboard.overdue_actions.length).padStart(2, "0") : "–"} sub="Need attention now" accent="coral" />

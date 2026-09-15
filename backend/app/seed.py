@@ -13,7 +13,7 @@ def seed() -> None:
             print("Seed skipped: customers already exist.")
             return
         today = datetime.now(timezone.utc).replace(hour=10, minute=0, second=0, microsecond=0)
-        db.add(User(name="Aarav Mehta", email="aarav.mehta@example.test"))
+        db.add(User(name="Tirtha Mehta", email="tirtha.mehta@example.test"))
         definitions = [
             {"name": "ABC Pharma", "industry": "Pharmaceuticals", "location": "Mumbai", "email": "procurement@abcpharma.example", "phone": "+91 22 5550 0101", "contact": ("Rahul Sharma", "Procurement Manager"), "op": ("Supply expansion", "500 units/month supply proposal", "3200000", "NEGOTIATION", 68, "MediSource"), "summary": "Discussed 500 units per month. Rahul requested a revised quotation and stressed delivery reliability.", "requirement": "Approximately 500 units per month", "pain": "Current supplier delivery is unreliable", "competitor": "MediSource is offering a lower price", "action": ("Send revised quotation to Rahul", -1, "HIGH"), "payment": ("845000", "PAID", -18)},
             {"name": "XYZ Healthcare", "industry": "Hospital Network", "location": "Bengaluru", "email": "sourcing@xyzhealthcare.example", "phone": "+91 80 5550 0202", "contact": ("Nisha Iyer", "Head of Strategic Sourcing"), "op": ("Critical-care equipment renewal", "Annual equipment renewal", "1800000", "PROPOSAL", 52, "Careline Systems"), "summary": "Nisha asked for clinical references and needs a response after sharing the proposal internally.", "requirement": "Clinical references and service-level documentation", "pain": "Service response-time visibility", "competitor": "Careline Systems is incumbent", "action": ("Call Nisha to review proposal feedback", 0, "HIGH"), "payment": ("510000", "PAID", -35)},
